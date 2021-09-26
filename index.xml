@@ -331,9 +331,16 @@ loading="lazy"
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="使用快捷指令运行脚本">使用快捷指令运行脚本&lt;/h3>
 &lt;p>在不使用 Cron 定时任务的情况下，我需要每次都使用 SSH 连接路由器然后运行脚本。得益于快捷指令 APP，快捷指令支持 SSH 连接，这一切又变的简单起来了。&lt;/p>
 &lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 143;
+flex-basis: 343px"
 >
-&lt;a href="https://i.vince.pub/IMG_0005%2820201021-212444%29.PNG" >
-&lt;img src="https://i.vince.pub/IMG_0005%2820201021-212444%29.PNG"
+&lt;a href="https://i.vince.pub/p/ruijie-router/IMG_0005%2820201021-212444%29.PNG" data-size="2388x1668">
+&lt;img src="https://i.vince.pub/p/ruijie-router/IMG_0005%2820201021-212444%29.PNG"
+width="2388"
+height="1668"
+srcset="https://i.vince.pub/p/ruijie-router/IMG_0005%2820201021-212444%29_huae886b6fd6887f9998fde4f150003c98_630738_480x0_resize_box_2.PNG 480w, https://i.vince.pub/p/ruijie-router/IMG_0005%2820201021-212444%29_huae886b6fd6887f9998fde4f150003c98_630738_1024x0_resize_box_2.PNG 1024w"
 loading="lazy"
 >
 &lt;/a>
