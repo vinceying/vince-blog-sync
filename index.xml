@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vince</title><link>https://i.vince.pub/</link><description>Recent content on Vince</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://i.vince.pub/index.xml" rel="self" type="application/rss+xml"/><item><title>前端在线编辑博客，使用 Codespaces 搭建 Hexo 博客</title><link>https://i.vince.pub/p/hexo-codespaces/</link><pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate><guid>https://i.vince.pub/p/hexo-codespaces/</guid><description>&lt;img src="https://i.vince.pub/p/hexo-codespaces/20210515152919.png" alt="Featured image of post 前端在线编辑博客，使用 Codespaces 搭建 Hexo 博客" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vince</title><link>https://i.vince.pub/</link><description>Recent content on Vince</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://i.vince.pub/index.xml" rel="self" type="application/rss+xml"/><item><title>Webify 使用体验及 hugo 部署实例</title><link>https://i.vince.pub/p/webify/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://i.vince.pub/p/webify/</guid><description>&lt;img src="https://i.vince.pub/p/webify/2021-10-10150621.png" alt="Featured image of post Webify 使用体验及 hugo 部署实例" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;h3 id="与云开发的渊源">与云开发的渊源&lt;/h3>
+&lt;p>其实我算是云开发比较早的用户，最早开始使用云开发是在去年，参加了云开发的静态网站托管赞助计划。这一切都要从个人博客的部署说起，我相信 GitHub Page 是很多人对静态托管的启蒙，有一个先吃饱再吃好的循序渐进的步骤，访问速度在后期也成为选择部署的主要考虑因素，通过赞助计划开始接触到云开发的各项服务。&lt;/p>
+&lt;p>最早是通过 cloudbase-action 这个插件将博客推送到云开发的静态托管，但是由于 GitHub Actions 的 Runner 的局限性，部署过程中网络环境有很大的局限性。这也是第一个版本，第二个版本借助了 CloudBase Framework 的赋能。在这里我也有感觉，webify 的灵感也有一些来自这里。&lt;/p>
+&lt;h3 id="webify">Webify&lt;/h3>
+&lt;p>Serverless 模式最近一直很火热，我个人对云开发的理解就是做中国的 Vercel，在 Vercel 和 Cloudflare Pages 面前，还是很开心国内也有做一款类似的产品。在我看来，Webify 提供的是一个一站式的解决方法，现在这种方式下，每次 Push 后剩下的一套流程都不需要我动手了（例如静态页面生成、部署和 CDN 配置等），这应该是个人博客及网站比较理想的一个方法。&lt;/p>
+&lt;h2 id="体验">体验&lt;/h2>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 303;
+flex-basis: 727px"
+>
+&lt;a href="https://i.vince.pub/p/webify/2021-10-10150621.png" data-size="1540x508">
+&lt;img src="https://i.vince.pub/p/webify/2021-10-10150621.png"
+width="1540"
+height="508"
+srcset="https://i.vince.pub/p/webify/2021-10-10150621_hu67be13a5395264ba487ba02dc6747a09_164195_480x0_resize_box_2.png 480w, https://i.vince.pub/p/webify/2021-10-10150621_hu67be13a5395264ba487ba02dc6747a09_164195_1024x0_resize_box_2.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>Webify 目前支持了主流的托管平台和绝大多数的网站框架模板，使用过程就不再累赘，OAuth 授权之后，导入仓库即可，对已支持的模板还可以进行自动识别，整个操作来说算是十分顺畅。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 282;
+flex-basis: 678px"
+>
+&lt;a href="https://i.vince.pub/p/webify/2021-10-10151339.png" data-size="1612x570">
+&lt;img src="https://i.vince.pub/p/webify/2021-10-10151339.png"
+width="1612"
+height="570"
+srcset="https://i.vince.pub/p/webify/2021-10-10151339_hu44446be5b03d42136ae134801108ab13_172746_480x0_resize_box_2.png 480w, https://i.vince.pub/p/webify/2021-10-10151339_hu44446be5b03d42136ae134801108ab13_172746_1024x0_resize_box_2.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>部署完成后会发现在静态托管中会多一个环境，这就是 Webify 部署过来静态资源。其实我简单的理解把它当作 &lt;strong>静态托管 + CloudBase Framework&lt;/strong> 的结合。这样也解决了之前说到的一个痛点，GitHub Actions 的 Runner 因为网络环境带来的问题。之前需要使用 GitHub Actions 这样的 CI/CD 能力来构建部署网站，&lt;strong>Webify 就是赋予了这样一种能力。&lt;/strong>&lt;/p>
+&lt;h2 id="hugo-的部署">Hugo 的部署&lt;/h2>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 134;
+flex-basis: 321px"
+>
+&lt;a href="https://i.vince.pub/p/webify/process.png" data-size="1096x817">
+&lt;img src="https://i.vince.pub/p/webify/process.png"
+width="1096"
+height="817"
+srcset="https://i.vince.pub/p/webify/process_hued0f12652a03e989f6350d2e237006e6_80102_480x0_resize_box_2.png 480w, https://i.vince.pub/p/webify/process_hued0f12652a03e989f6350d2e237006e6_80102_1024x0_resize_box_2.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>目前的 Webify 还没有支持 hugo 的摸板，交流群里&lt;a class="link" href="https://github.com/starkwang" target="_blank" rel="noopener"
+>@王伟嘉&lt;/a>也给出了&lt;code>将 hugo 的可执行二进制文件（linux64）放到项目里，在构建的时候调用运行&lt;/code>这样的方法。Webify 支持自定义构建配置，这样的方法确实非常好。但我用了另一种思路，借助 GitHub Actions 的能力，构建生成到另一个仓库或主分支，再由 Webify 的空模板配置去部署。这样的方法相对而言有些“听君一席话，如听一席话的感觉”，但我觉得这也是一个比较简单的解决方案。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy to Sync-repo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2.3.2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">fetch-depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Setup Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;0.79.1&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy_key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">external_repository&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">vinceying/vince-blog-sync&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>我相信后期 Webify 的模板是越来越多的，它也支持自定义构建配置。&lt;strong>但我认为，这或许也是一个思路，对于 Webify 来说，模板是许许多多的，所以开放自定义构建配置，当对于入门或追求方便的使用来说，面对各种各样的网站架构和功能，GitHub Actions 上的模板及资源，或许可以成为我们构建的好帮手。&lt;/strong>&lt;/p></description></item><item><title>前端在线编辑博客，使用 Codespaces 搭建 Hexo 博客</title><link>https://i.vince.pub/p/hexo-codespaces/</link><pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate><guid>https://i.vince.pub/p/hexo-codespaces/</guid><description>&lt;img src="https://i.vince.pub/p/hexo-codespaces/20210515152919.png" alt="Featured image of post 前端在线编辑博客，使用 Codespaces 搭建 Hexo 博客" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>多数情况下，我们会选择将 Hexo 安装在本地，其中最大的痛点就是不能多设备同步和环境固定。之后，在 GitHub Actions 推出以后，我们可以将 Hexo 的 Source 文件保存，通过 CI 来部署我们的博客，这样的好处就是跨设备同步非常方便，但是预览上会遇到一些问题。现在，GitHub 的 Codespaces 推出后，Hexo 的纯前端编辑部署完全可以实现了。本篇介绍如何使用 Codespaces 搭建 Hexo 博客及几种部署方法。Codespces 还支持&lt;strong>自动设置依赖关系、SSH 密钥。&lt;/strong>&lt;/p>
 &lt;h2 id="安装">安装&lt;/h2>
 &lt;h3 id="仓库及环境">仓库及环境&lt;/h3>
@@ -419,7 +508,7 @@ loading="lazy"
 &lt;li>持续写作&lt;/li>
 &lt;li>文章规范化&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted --></description></item><item><title>健康最为重要，记一次体检心得</title><link>https://i.vince.pub/p/health-condtion/</link><pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate><guid>https://i.vince.pub/p/health-condtion/</guid><description>&lt;img src="https://i.vince.pub/p/health-condtion/owen-beard-DK8jXx1B-1c-unsplash.jpg" alt="Featured image of post 健康最为重要，记一次体检心得" />&lt;h2 id="一次偶然的体检">一次偶然的体检&lt;/h2>
+&lt;p style="text-align:center;font-size:1.5em;font-weight:bold;">-未完待续-&lt;/p></description></item><item><title>健康最为重要，记一次体检心得</title><link>https://i.vince.pub/p/health-condtion/</link><pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate><guid>https://i.vince.pub/p/health-condtion/</guid><description>&lt;img src="https://i.vince.pub/p/health-condtion/owen-beard-DK8jXx1B-1c-unsplash.jpg" alt="Featured image of post 健康最为重要，记一次体检心得" />&lt;h2 id="一次偶然的体检">一次偶然的体检&lt;/h2>
 &lt;p>一开始我对转氨酶根本没有概念，只有在献血和高考体检的时候遇到过，这次体检没想到转氨酶太高了，我原本以为自己非常健康的。后来去门诊看了一下医生，还排查了一下病毒，好在没什么事情，医生说应该是&lt;strong>长期熬夜&lt;/strong>、&lt;strong>体重超重&lt;/strong>和不规律饮食引起的，开了一些护肝药给我，并且给了一些建议。&lt;/p>
 &lt;h2 id="什么是转氨酶">什么是转氨酶&lt;/h2>
 &lt;p>内容来自丁香医生&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，转氨酶是一系列酶的总称，主要包括丙氨酸氨基转移酶（谷丙转氨酶 ALT）、天冬氨酸氨基转移酶（谷草转氨酶 AST）、碱性磷酸酶、谷氨酰基转移酶和乳酸脱氢酶这五种。总的来说，我觉得还是自己的锅。&lt;/p>
@@ -637,26 +726,30 @@ Fluid Blog|https://hexo.fluid-dev.com/|Fluid官方博客
 [^footnote]: 脚注内容演示
 &lt;/code>&lt;/pre>&lt;h3 id="善用-html">善用 HTML&lt;/h3>
 &lt;p>我们可以在 Markdown 中插入一些简单的 HTML 代码或 CSS 片段来获得更多扩展，使得文章内容更具有多样性。以下演示几个简单功能。&lt;/p>
-&lt;p>&lt;!-- raw HTML omitted -->跳转位置演示（跳转位置设置点）&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;a id="demo">跳转位置演示（跳转位置设置点）&lt;/a>&lt;/p>
 &lt;h4 id="文字颜色">文字颜色&lt;/h4>
-&lt;p>&lt;!-- raw HTML omitted -->#519D9E颜色演示&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;span style="color: #519D9E; ">#519D9E颜色演示&lt;/span>&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;color: #519D9E; &amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>#519D9E颜色演示&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h4 id="文字大小">文字大小&lt;/h4>
-&lt;p>&lt;!-- raw HTML omitted -->0.7em 文字大小演示&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;span style="font-size:0.7em;">0.7em 文字大小演示&lt;/span>&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;font-size:0.7em;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>0.7em 文字大小演示&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h4 id="文字位置">文字位置&lt;/h4>
-&lt;!-- raw HTML omitted -->
+&lt;p style="text-align:center">内容居中演示&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text-align:center&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>内容居中演示&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> # 可以修改 text-align 参数来设置文字位置。
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h4 id="页内跳转">页内跳转&lt;/h4>
-&lt;p>&lt;!-- raw HTML omitted -->点击到达跳转位置演示&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;a href="#demo">点击到达跳转位置演示&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#demo&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>点击到达跳转位置演示&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> # 在需要跳转的地方添加此代码。
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;demo&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>跳转位置演示（跳转位置设置点）&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> # 在跳转位置添加次代码。
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h4 id="综合演示">综合演示&lt;/h4>
-&lt;!-- raw HTML omitted -->
+&lt;p style="text-align:center;color:#8EC0E4;font-size:1.5em;font-weight: bold;">
+综合演示
+&lt;br>
+优雅使用 Fluid写文章
+&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text-align:center;color:#8EC0E4;font-size:1.5em;font-weight: bold;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 综合演示
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -664,12 +757,19 @@ Fluid Blog|https://hexo.fluid-dev.com/|Fluid官方博客
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="iframe-页面镶套">iframe 页面镶套&lt;/h4>
 &lt;p>iframe 页面镶套可以帮助我们更好的展示一个页面。比如以下演示页面。&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;iframe src="https://i.vince.pub/" width="100%" height="650" name="topFrame" scrolling="yes" noresize="noresize" frameborder="0" id="topFrame">&lt;/iframe>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">iframe&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://i.vince.pub/&amp;#34;&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100%&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;500&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;topFrame&amp;#34;&lt;/span> &lt;span class="na">scrolling&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span> &lt;span class="na">noresize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;noresize&amp;#34;&lt;/span> &lt;span class="na">frameborder&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;topFrame&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">iframe&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>一些参数说明，&lt;code>width=&amp;quot;100%&amp;quot;&lt;/code> 为宽度自适应，高度请根据实际需求跳转，&lt;strong>注意移动端页面是否匹配。&lt;/strong> &lt;code>scrolling&lt;/code> 为滚动条参数。&lt;code>frameborder&lt;/code> 为边框参数。&lt;code>noresize&lt;/code> 属性规定用户无法调整框架的大小。&lt;/p>
 &lt;h4 id="details-标签">details 标签&lt;/h4>
 &lt;p>用于展示代码较多需要折叠或折叠相关内容，以下为演示。&lt;code>summary&lt;/code> 填写显示名称。&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;details>
+&lt;summary>Demo&lt;/summary>
+```html
+&lt;p>&lt;b>好友申请备注：fluid&lt;/b>&lt;/p>
+&lt;p>&lt;b>提问之前请先仔细查阅用户文档&lt;/b>&lt;/p>
+&lt;img width="200" src="https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/wechat.png" alt="wechat">
+```
+&lt;/details>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">details&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">summary&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Demo&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">summary&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>好友申请备注：fluid&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
